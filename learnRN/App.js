@@ -10,7 +10,8 @@ import {
   StyleSheet,  // 样式，可为组件创建样式类
   Text,
   View,
-  Image
+  Image,
+  TextInput,
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -21,14 +22,6 @@ const instructions = Platform.select({
 });
 
 var Dimensions = require('Dimensions');
-var allBadgeData = require('./badgeData.json');
-
-var {width} = Dimensions.get('window');
-var cols = 3;
-var boxW = 100;
-var boxH = 100;
-var hMargin = 25;
-var vMargin = (width - boxW * cols) / (cols + 1);
 
 
 export default class App extends Component<{}> {
@@ -37,47 +30,31 @@ export default class App extends Component<{}> {
     // 通过return来返回
     return (
       <View style={styles.container}>
-          {this.allBadge()}
+        <TextInput style={ styles.textInputStyle }
+                   keyboardType={'number-pad'}
+                   // value={'emmmmm'}
+                   // multiline={true}
+                   placeholder={'emmm'}
+                   clearButtonMode={'always'}
+        />
       </View>
     );
   }
 
-  allBadge() {
-      var allBadge = [];
-      for (var i = 0; i < allBadgeData.data.length; i++) {
-          var badge = allBadgeData.data[i];
-          allBadge.push(
-              <View key={i} style={styles.cellView}>
-                  <Image source={{ uri: badge.icon }} style={styles.cellImageStyle} />
-                  <Text style={styles.cellBottomTextStyle}> {badge.title} </Text>
-              </View>
-          );
-      }
-      return allBadge;
-  }
 }
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        flexWrap: 'wrap',
     },
 
-    cellView: {
-        alignItems: 'center',
-        height: boxW,
-        width: boxH,
-        marginTop: hMargin,
-        marginLeft: vMargin
-    },
-
-    cellImageStyle: {
-        height: 100,
-        width: 100
-    },
-
-    cellBottomTextStyle: {
-
+    textInputStyle: {
+        marginTop: 25,
+        height:100,
+        width:200,
+        borderWidth: 1,
+        borderColor: '#e8e8e8'
     }
+
 
 });
