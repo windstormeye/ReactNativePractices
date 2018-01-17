@@ -22,39 +22,16 @@ const instructions = Platform.select({
 });
 
 var Dimensions = require('Dimensions');
-
+// 引入组件
+var QQLoginView = require('./QQLoginView')
 
 export default class App extends Component<{}> {
   // 初始化 render相当于ViewDidLoad 返回具体的组件内容
   render() {
     // 通过return来返回
     return (
-      <View style={styles.container}>
-        <TextInput style={ styles.textInputStyle }
-                   keyboardType={'number-pad'}
-                   // value={'emmmmm'}
-                   // multiline={true}
-                   placeholder={'emmm'}
-                   clearButtonMode={'always'}
-        />
-      </View>
+        <QQLoginView />
     );
   }
 
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-    },
-
-    textInputStyle: {
-        marginTop: 25,
-        height:100,
-        width:200,
-        borderWidth: 1,
-        borderColor: '#e8e8e8'
-    }
-
-
-});
