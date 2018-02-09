@@ -36,7 +36,7 @@ export default class App extends Component<{}> {
                     onPress={()=>this.renderPress('点击')}
                     onLongPress={()=>this.renderPress('长按')}
                     onPressOut={()=>this.renderPress('移开')}
-                >
+                    >
                     <Text>2333</Text>
                 </TouchableOpacity>
                 <View>
@@ -47,12 +47,12 @@ export default class App extends Component<{}> {
         );
     }
 
-    // 更新状态机
+  // 更新状态机
   renderPress(event) {
       this.setState({
           title: this.props.name,
       })
-  }
+  }``
 }
 
 const styles = StyleSheet.create({
