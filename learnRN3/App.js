@@ -38,8 +38,8 @@ export default class App extends Component<Props> {
                 pagingEnabled={true}
                 showsHorizontalScrollIndicator={false}
                 onMomentumScrollEnd={(e) => this.onAnimationEnd(e)}
-                onScrollBeginDrag={(e) => this.onScrollBeginDrag}
-                onScrollEndDrag={(e) => this.onScrollEndDrag}
+                onScrollBeginDrag={(e) => this.onScrollBeginDrag(e)}
+                onScrollEndDrag={(e) => this.onScrollEndDrag(e)}
             >
                 {this.renderChildView()}
             </ScrollView>
@@ -51,18 +51,15 @@ export default class App extends Component<Props> {
     );
   }
 
+  // 组件都载入完毕
   componentDidMount() {
       this.startTimer();
-  }
-
-  componentWillUnmount() {
-      // this.timer1 && clearInterval(this.timer1);
   }
 
   startTimer() {
         var scrollView = this.refs.scrollView;
         var imgCount = imageData.data.length;
-        this.timer1 = setInterval( ()=>{
+        this.timer1 = setInterval(() => {
             var activePage = 0;
             if ((this.state.currentPage + 1) >= imgCount) {
                 activePage = 0
@@ -80,11 +77,14 @@ export default class App extends Component<Props> {
          }, 1000);
   }
 
-  onScrollBeginDrag() {
-      this.clearInterval(this.timer1);
+  // 开始拖拽
+  // 需要把ScrollView自身作为参数传入
+  onScrollBeginDrag(e) {
+      clearInterval(this.timer1);
   }
 
-  onScrollEndDrag() {
+  // 结束拖拽
+  onScrollEndDrag(e) {
       this.startTimer();
   }
 
