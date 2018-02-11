@@ -1,47 +1,84 @@
-[
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  },
-  {
-    "image" : "wine.png",
-    "name" : "React",
-    "money" : 30
-  }
-]
+{
+  "data": [
+    {
+      "cars": [
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        }
+      ],
+      "title": "A"
+    },
+    {
+      "cars": [
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        }
+      ],
+      "title": "B"
+    },
+    {
+      "cars": [
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        }
+      ],
+      "title": "C"
+    },
+    {
+      "cars": [
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        },
+        {
+          "image": "wine.png",
+          "name": "React",
+          "money": 30
+        }
+      ],
+      "title": "D"
+    }
+  ]
+}
