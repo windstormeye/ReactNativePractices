@@ -9,7 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
 var Main = require("./component/main")

@@ -5,7 +5,7 @@ import {
   Text,
   View,
   TabBarIOS,
-  NavigatorIOS
+  NavigatorIOS,
 } from 'react-native';
 
 var Home = require("../component/home")
